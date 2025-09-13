@@ -1,100 +1,79 @@
-Teste Prático – Gestão de Funcionários (Iniflex)
-Este projeto é uma solução em Java para um desafio de programação que envolve a criação e manipulação de uma lista de funcionários. O sistema realiza diversas operações como inserção, remoção, cálculo de salários, agrupamento por função e exibição de dados formatados.
+# 🧑‍💼 Teste Prático – Gestão de Funcionários (Iniflex)
+Este projeto é uma solução em **Java** para um desafio de programação que envolve a criação e manipulação de uma lista de funcionários.  
+O sistema realiza operações como inserção, remoção, cálculo de salários, agrupamento por função e exibição de dados formatados.
 
-📜 Descrição
-O objetivo principal é demonstrar o uso de conceitos fundamentais e avançados da linguagem Java, incluindo Programação Orientada a Objetos (POO), manipulação de coleções, uso da API de Streams para processamento de dados e o tratamento de datas e valores monetários com precisão.
+## 📜 Descrição
+O objetivo principal é demonstrar o uso de conceitos fundamentais e avançados da linguagem Java, incluindo:
+- **POO** (Programação Orientada a Objetos)  
+- **Coleções** (`List`, `Map`, etc.)  
+- **Streams API** para processamento declarativo de dados  
+- **java.time** para tratamento de datas  
+- **BigDecimal** para cálculos financeiros com precisão  
 
-O fluxo principal da aplicação, contido na classe Principal, executa as seguintes tarefas em sequência:
+## 🔄 Fluxo da Aplicação
+A classe `Principal` executa as seguintes tarefas em sequência:
+1. **Criação e Inserção**: Instancia e insere um conjunto de funcionários em uma lista.  
+2. **Remoção**: Remove o funcionário `"João"`.  
+3. **Aumento Salarial**: Aplica aumento de **10%** para todos os funcionários.  
+4. **Agrupamento**: Agrupa funcionários por função em um `Map`.  
+5. **Filtragem**: Exibe funcionários que fazem aniversário em **outubro** e **dezembro**.  
+6. **Cálculos e Ordenação**:  
+   - Encontra o funcionário **mais velho**.  
+   - Ordena funcionários em ordem **alfabética**.  
+   - Calcula a **soma total dos salários**.  
+   - Mostra **quantos salários mínimos** cada funcionário recebe.  
 
-Criação e Inserção: Instancia e insere um conjunto de funcionários em uma lista.
+## ✨ Funcionalidades
+- ✅ **Cadastro de Funcionários**: nome, data de nascimento, salário e função.  
+- ✅ **Aumento Salarial**: aplicação de percentual sobre o salário.  
+- ✅ **Relatórios e Consultas**:  
+  - Impressão formatada dos dados.  
+  - Agrupamento por cargo.  
+  - Consulta de aniversariantes.  
+  - Identificação do mais velho.  
+  - Ordenação alfabética.  
+  - Cálculo da folha salarial.  
+  - Análise salarial em múltiplos do salário mínimo.  
 
-Remoção: Remove um funcionário específico ("João") da lista.
+## 🛠️ Tecnologias Utilizadas
+- ☕ **Java 8+**  
+- 📅 `java.time.LocalDate`  
+- 💰 `java.math.BigDecimal`  
+- 🔗 **Streams API**  
+- ⚡ **Expressões Lambda**  
 
-Aumento Salarial: Aplica um aumento de 10% no salário de todos os funcionários.
+## 📂 Estrutura do Projeto
+main/
+├── Pessoa.java # Classe base com nome e dataNascimento
+├── Funcionario.java # Herda de Pessoa, adiciona salario e funcao
+└── Principal.java # Contém a lógica de negócio e execução
 
-Agrupamento: Agrupa os funcionários por sua função em um Map.
 
-Filtragem: Exibe os funcionários que fazem aniversário em outubro e dezembro.
+## 🚀 Como Executar
+### Pré-requisitos
+- **JDK 8+** instalado e configurado.  
 
-Cálculos e Ordenação:
+### Passos
+1. Clone o repositório *(opcional)*:
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   cd seu-repositorio
 
-Encontra o funcionário com a maior idade.
+2. Compile os arquivos:
+   
+   bash
+   
+   # A partir da pasta que contém 'main'
+   javac main/*.java
 
-Ordena a lista de funcionários por ordem alfabética.
+4. Execute o programa:
 
-Calcula e exibe a soma total dos salários.
+   bash
+   
+   java main.Principal
 
-Calcula quantos salários mínimos cada funcionário recebe.
-
-✨ Funcionalidades
-Cadastro de Funcionários: Representação de funcionários com nome, data de nascimento, salário e função.
-
-Aumento de Salário: Funcionalidade para aplicar um aumento percentual a todos os funcionários.
-
-Relatórios e Consultas:
-
-Impressão formatada de todos os dados dos funcionários.
-
-Agrupamento de funcionários por cargo.
-
-Consulta de aniversariantes por mês.
-
-Identificação do funcionário mais velho (nome e idade).
-
-Exibição da lista de funcionários em ordem alfabética.
-
-Cálculo do valor total da folha salarial.
-
-Análise salarial baseada no salário mínimo.
-
-🛠️ Tecnologias Utilizadas
-Java 8+: O projeto utiliza recursos modernos do Java, como:
-
-java.time (LocalDate): Para manipulação precisa de datas.
-
-java.math.BigDecimal: Para garantir a precisão em cálculos financeiros (salários).
-
-Streams API: Para processamento declarativo e funcional de coleções (filtros, mapas, ordenação, etc.).
-
-Expressões Lambda: Para simplificar a implementação de interfaces funcionais.
-
-📂 Estrutura do Projeto
-O código está organizado no pacote main e dividido nas seguintes classes:
-
-Pessoa.java: Classe base que contém os atributos comuns nome e dataNascimento.
-
-Funcionario.java: Classe que herda de Pessoa e adiciona os atributos específicos salario e funcao.
-
-Principal.java: Classe principal (main) que contém a lógica de negócio e executa todas as operações sobre a lista de funcionários.
-
-🚀 Como Executar
-Este é um projeto Java simples e não requer dependências externas. Para compilá-lo e executá-lo via linha de comando, siga os passos abaixo:
-
-Pré-requisitos:
-
-Ter o JDK (Java Development Kit) 8 ou superior instalado e configurado no seu sistema.
-
-Clone o repositório (opcional):
-
-Bash
-
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
-Navegue até a pasta raiz do projeto.
-
-Compile os arquivos .java:
-
-Bash
-
-# A partir da pasta que contém a pasta 'main'
-javac main/*.java
-Execute a classe principal:
-
-Bash
-
-# A partir da pasta que contém a pasta 'main'
-java main.Principal
-O console exibirá o resultado de todas as operações realizadas sobre a lista de funcionários.
+O console exibirá todos os relatórios e operações realizadas.
 
 ✒️ Autor
-Matheus Lino - Desenvolvedor do código original
+
+👨‍💻 Matheus Lino – Desenvolvedor do código original
